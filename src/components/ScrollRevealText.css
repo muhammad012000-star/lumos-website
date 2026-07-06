@@ -1,0 +1,8 @@
+.reveal-word {
+  color: var(--ash);
+  transition: color 0.15s ease;
+}
+
+.reveal-word.is-active {
+  color: var(--snow);
+}

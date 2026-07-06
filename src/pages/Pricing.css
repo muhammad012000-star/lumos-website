@@ -1,0 +1,128 @@
+.pricing-hero {
+  padding-top: 220px;
+  text-align: center;
+  border-bottom: 1px solid var(--dust);
+}
+
+.pricing-hero h1 {
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin: 0 auto 24px;
+}
+
+.pricing-hero p {
+  color: var(--ash);
+  max-width: 520px;
+  margin: 0 auto 32px;
+}
+
+.pricing-grid-section {
+  border-bottom: 1px solid var(--dust);
+}
+
+.pricing-grid-head {
+  margin-bottom: 48px;
+}
+
+.pricing-grid-head h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 400;
+}
+
+.pricing-grid-head span {
+  color: var(--ash);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.pricing-card {
+  border: 1px solid var(--dust);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card-img {
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+}
+
+.pricing-card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pricing-card-body h3 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.pricing-card-price {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 4px 0;
+}
+
+.pricing-card-body p {
+  color: var(--ash);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.pricing-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.pricing-card-actions a:first-child {
+  color: var(--ash);
+  border-bottom: 1px solid var(--dust);
+}
+
+.pricing-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.pricing-bottom-card {
+  border: 1px solid var(--dust);
+  border-radius: 14px;
+  padding: 40px;
+}
+
+.pricing-bottom-card h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.pricing-bottom-card p {
+  color: var(--ash);
+  margin-bottom: 24px;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pricing-grid,
+  .pricing-bottom {
+    grid-template-columns: 1fr;
+  }
+}

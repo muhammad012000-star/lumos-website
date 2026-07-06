@@ -1,0 +1,277 @@
+.project-hero {
+  padding-top: 200px;
+}
+
+.project-meta-row {
+  display: flex;
+  gap: 24px;
+  color: var(--ash);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.project-title {
+  font-size: clamp(48px, 8vw, 140px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 32px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.project-intro {
+  max-width: 900px;
+  font-size: clamp(20px, 2.2vw, 36px);
+  line-height: 1.35;
+  color: var(--snow);
+  margin-bottom: 56px;
+}
+
+.project-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  border: 1px solid var(--dust);
+  border-radius: 16px;
+  padding: 32px;
+  margin-bottom: 56px;
+}
+
+.project-link-card h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.project-link-card p {
+  color: var(--ash);
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+}
+
+.project-cover video,
+.project-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-copy {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+}
+
+.project-copy-inner {
+  width: 100%;
+  padding: 0 var(--gutter);
+}
+
+.project-about {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+}
+
+.project-about-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+}
+
+.project-about-text {
+  max-width: 820px;
+  font-size: clamp(17px, 1.4vw, 24px);
+  line-height: 1.55;
+  color: var(--snow);
+}
+
+.project-credits {
+  padding: 60px 0 100px;
+}
+
+.project-credits-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+}
+
+.project-credits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-credit {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+  border-bottom: 1px solid var(--dust);
+  padding-bottom: 16px;
+  font-size: 17px;
+}
+
+.project-credit-role {
+  color: var(--ash);
+}
+
+.project-image {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--dust);
+  margin: 0 var(--gutter) 64px;
+}
+
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image-founders,
+.project-image-wide {
+  aspect-ratio: 21 / 9;
+}
+
+.project-image-tall {
+  max-width: 700px;
+  aspect-ratio: 4 / 5;
+}
+
+.project-testimonial {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+}
+
+.project-testimonial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.project-image-legs {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.project-testimonial-quote {
+  font-size: clamp(24px, 2.6vw, 40px);
+  line-height: 1.35;
+  margin: 16px 0 32px;
+  color: var(--snow);
+}
+
+.project-testimonial-name {
+  font-size: 18px;
+}
+
+.project-testimonial-role {
+  color: var(--ash);
+  font-size: 14px;
+}
+
+.project-beyond {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+}
+
+.project-beyond-head {
+  margin-bottom: 56px;
+}
+
+.project-beyond-head h2 {
+  font-size: clamp(32px, 4vw, 64px);
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.project-beyond-head p {
+  color: var(--ash);
+  max-width: 560px;
+}
+
+.project-beyond-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project-beyond-grid .project-image {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+}
+
+.project-beyond-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.project-beyond-footer h3 {
+  font-size: 28px;
+  font-weight: 400;
+  flex: 1;
+  min-width: 240px;
+}
+
+.project-results {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+}
+
+.project-results h2 {
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 56px;
+  color: var(--ash);
+}
+
+.project-image-results {
+  margin: 0 0 40px;
+  aspect-ratio: 16 / 8;
+}
+
+.project-results-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.project-next {
+  padding: 100px 0;
+  border-top: 1px solid var(--dust);
+  text-align: center;
+}
+
+.project-next-link {
+  display: block;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 400;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .project-about-grid,
+  .project-credits-grid,
+  .project-testimonial-grid,
+  .project-beyond-grid {
+    grid-template-columns: 1fr;
+  }
+}

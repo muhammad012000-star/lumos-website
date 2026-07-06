@@ -22,3 +22,9 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Unlicensed demo font (personal-use only, dev/preview use only — do not ship)
+public/assets/fonts/neue-montreal-demo/
+
+# Local Claude Code permissions (machine-specific)
+.claude/settings.local.json

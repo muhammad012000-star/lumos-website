@@ -1,0 +1,21 @@
+.fit-text-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fit-text {
+  display: block;
+  white-space: nowrap;
+  line-height: 1;
+  margin: 0;
+}
+
+.fit-text-measure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  pointer-events: none;
+  width: max-content;
+}

@@ -1,0 +1,138 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(13,13,13,0.9), transparent);
+}
+
+.nav-inner {
+  width: 100%;
+  padding: 28px var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.nav-logo-mark {
+  width: 18px;
+  height: 18px;
+  color: var(--snow);
+  flex-shrink: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  font-size: 18px;
+  color: var(--snow);
+}
+
+.nav-links button {
+  font-size: 18px;
+  color: var(--snow);
+}
+
+.nav-links a:hover {
+  color: var(--snow);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-cta {
+  font-size: 16px;
+  padding: 12px 22px;
+}
+
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 2px;
+}
+
+.nav-burger span {
+  width: 22px;
+  height: 1.5px;
+  background: var(--snow);
+}
+
+.nav-mobile {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--void);
+  display: flex;
+  align-items: center;
+}
+
+.nav-mobile-close {
+  position: absolute;
+  top: 40px;
+  right: var(--gutter);
+  font-size: 32px;
+  line-height: 1;
+  color: var(--snow);
+  font-weight: 300;
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--gutter);
+}
+
+.nav-mobile-links a,
+.nav-mobile-links button {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: clamp(40px, 9vw, 110px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ash);
+}
+
+.nav-mobile-links a:hover,
+.nav-mobile-links button:hover {
+  -webkit-text-stroke: 1px var(--snow);
+}
+
+.nav-mobile-links a.is-active {
+  color: var(--snow);
+  -webkit-text-stroke: 0;
+}
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-inner {
+    padding: 22px 24px;
+  }
+}
