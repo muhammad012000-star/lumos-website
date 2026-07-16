@@ -35,12 +35,7 @@ export default function Nav() {
     <header className="nav">
       <div className="nav-inner">
         <Link to="/" className="nav-logo">
-          <svg className="nav-logo-mark" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4H10V24H4V4Z" fill="currentColor" />
-            <path d="M13 4H19V24H13V4Z" fill="currentColor" />
-            <path d="M22 4L26 8V24H22V4Z" fill="currentColor" />
-          </svg>
-          Lumos Studios®
+          lumos
         </Link>
         <div className="nav-right">
           <nav className="nav-links">

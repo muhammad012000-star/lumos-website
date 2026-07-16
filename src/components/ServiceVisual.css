@@ -1,0 +1,181 @@
+.service-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  background: linear-gradient(155deg, var(--noir), var(--void));
+  border: 1px solid var(--dust);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Web Development — drifting grid with a pulsing node */
+.sv-web {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sv-web-grid {
+  position: absolute;
+  inset: -1px;
+  background-image:
+    linear-gradient(rgba(248, 248, 248, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 248, 248, 0.08) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: sv-grid-drift 14s linear infinite;
+}
+
+.sv-web-dot {
+  position: absolute;
+  top: 40%;
+  left: 55%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--snow);
+  box-shadow: 0 0 30px 6px rgba(248, 248, 248, 0.5);
+  animation: sv-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes sv-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 40px 40px, 40px 40px; }
+}
+
+@keyframes sv-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.6); opacity: 1; }
+}
+
+/* Video Production — stacked, gently rotating film frames */
+.sv-video {
+  position: relative;
+  width: 60%;
+  height: 60%;
+}
+
+.sv-video-frame {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--ash);
+  border-radius: 14px;
+  background: rgba(248, 248, 248, 0.03);
+}
+
+.sv-video-frame.f1 { transform: rotate(-8deg); opacity: 0.4; }
+.sv-video-frame.f2 { transform: rotate(4deg); opacity: 0.65; }
+.sv-video-frame.f3 {
+  opacity: 1;
+  background: rgba(248, 248, 248, 0.06);
+  animation: sv-frame-breathe 5s ease-in-out infinite;
+}
+
+@keyframes sv-frame-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* Photography — concentric aperture rings */
+.sv-photo {
+  position: relative;
+  width: 70%;
+  height: 70%;
+}
+
+.sv-photo-ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--ash);
+  border-radius: 50%;
+}
+
+.sv-photo-ring.r2 { inset: 18%; animation: sv-ring-pulse 4s ease-in-out infinite; }
+.sv-photo-ring.r3 { inset: 36%; background: rgba(248, 248, 248, 0.08); border-color: var(--snow); }
+
+@keyframes sv-ring-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+
+/* Branding — overlapping palette circles */
+.sv-branding {
+  position: relative;
+  width: 65%;
+  height: 65%;
+}
+
+.sv-branding-circle {
+  position: absolute;
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  background: rgba(248, 248, 248, 0.14);
+  border: 1px solid var(--dust);
+  animation: sv-drift 8s ease-in-out infinite;
+}
+
+.sv-branding-circle.c1 { top: 0; left: 10%; }
+.sv-branding-circle.c2 { top: 15%; left: 40%; animation-delay: -2.5s; }
+.sv-branding-circle.c3 { top: 35%; left: 15%; animation-delay: -5s; }
+
+@keyframes sv-drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(6%, -6%); }
+}
+
+/* Marketing — ascending bars */
+.sv-marketing {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 55%;
+}
+
+.sv-bar {
+  width: 16px;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(to top, var(--ash), var(--snow));
+  animation: sv-bar-grow 3.2s ease-in-out infinite;
+}
+
+.sv-bar.b1 { height: 35%; animation-delay: -0.6s; }
+.sv-bar.b2 { height: 55%; animation-delay: -1.2s; }
+.sv-bar.b3 { height: 80%; animation-delay: -1.8s; }
+.sv-bar.b4 { height: 50%; animation-delay: -2.4s; }
+.sv-bar.b5 { height: 65%; animation-delay: -3s; }
+
+@keyframes sv-bar-grow {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.15); }
+}
+
+/* Audio — waveform */
+.sv-audio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 50%;
+}
+
+.sv-wave {
+  width: 4px;
+  height: 30%;
+  border-radius: 4px;
+  background: var(--snow);
+  animation: sv-wave-move 1.2s ease-in-out infinite;
+}
+
+@keyframes sv-wave-move {
+  0%, 100% { height: 20%; opacity: 0.5; }
+  50% { height: 90%; opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-visual * {
+    animation: none !important;
+  }
+}

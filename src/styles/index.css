@@ -129,7 +129,6 @@ img, video {
 .noise-overlay {
   position: fixed;
   inset: 0;
-  background-image: url('/assets/images/noise-bg-BO_BuknL.png');
   background-size: 300px;
   opacity: 0.035;
   pointer-events: none;

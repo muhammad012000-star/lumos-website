@@ -32,8 +32,12 @@
 }
 
 .hero-title .fit-text {
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.hero-title-mobile {
+  display: none;
 }
 
 .hero-sub {
@@ -591,7 +595,44 @@
 }
 
 @media (max-width: 900px) {
-  .services-grid,
+  .hero-inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero-social {
+    display: none;
+  }
+  .hero-title {
+    display: none;
+  }
+  .hero-title-mobile {
+    display: block;
+    font-size: clamp(40px, 12vw, 64px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  .statement {
+    align-items: flex-start;
+  }
+  .statement .statement-inner {
+    padding: 25vh 20px 0;
+  }
+  .statement h2 {
+    font-weight: 500;
+    line-height: 0.94;
+    letter-spacing: -0.03em;
+    margin-bottom: 80px;
+  }
+  .statement .reveal-word:last-child {
+    opacity: 0.45;
+  }
+  .statement-cta {
+    margin: 0;
+  }
+  .services-grid {
+    display: none;
+  }
   .works-grid {
     grid-template-columns: 1fr;
   }
@@ -600,22 +641,69 @@
   }
   .process-step {
     min-height: 0;
-    display: block;
-    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 0;
   }
   .process-info {
-    padding: 24px 24px 0;
+    display: contents;
   }
   .process-media-col {
     display: none;
   }
-  .process-img-mobile {
-    display: block;
-    aspect-ratio: 4 / 3;
+  .process-numeral {
+    order: 1;
+    width: 28px;
+    height: 28px;
+    border-width: 1px;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .process-title {
+    order: 2;
     width: 100%;
-    margin-top: 24px;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.05;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    border-bottom: none;
+  }
+  .process-img-mobile {
+    order: 3;
+    display: block;
+    aspect-ratio: 1 / 1.05;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-radius: 12px;
     background-size: cover;
     background-position: center;
+  }
+  .process-tags {
+    order: 4;
+    width: 100%;
+    gap: 8px;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+    border-bottom: none;
+  }
+  .process-tags span {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-width: 1px;
+  }
+  .process-desc {
+    order: 5;
+    width: 100%;
+    color: var(--ash);
+    font-size: 15px;
+    line-height: 1.45;
+    max-width: none;
+    padding-bottom: 24px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--dust);
   }
   .contact-grid {
     grid-template-columns: 1fr;

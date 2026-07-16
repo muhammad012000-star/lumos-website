@@ -4,6 +4,7 @@ import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import ContactOverlay from './components/ContactOverlay.jsx'
 import { ContactProvider } from './context/ContactContext.jsx'
+import { asset } from './utils/asset.js'
 import Home from './pages/Home.jsx'
 import Services from './pages/Services.jsx'
 import LaunchKits from './pages/LaunchKits.jsx'
@@ -23,7 +24,10 @@ function ScrollToTop() {
 export default function App() {
   return (
     <ContactProvider>
-      <div className="noise-overlay" />
+      <div
+        className="noise-overlay"
+        style={{ backgroundImage: `url(${asset('/assets/images/noise-bg-BO_BuknL.png')})` }}
+      />
       <ScrollToTop />
       <Nav />
       <Routes>

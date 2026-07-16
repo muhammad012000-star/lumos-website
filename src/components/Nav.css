@@ -18,17 +18,11 @@
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 400;
   letter-spacing: -0.01em;
-}
-
-.nav-logo-mark {
-  width: 18px;
-  height: 18px;
   color: var(--snow);
-  flex-shrink: 0;
+  text-transform: lowercase;
 }
 
 .nav-right {
@@ -133,6 +127,12 @@
     display: none;
   }
   .nav-inner {
-    padding: 22px 24px;
+    padding: 22px 28px 22px 24px;
+  }
+  .nav-logo {
+    font-size: 18px;
+  }
+  .nav-burger span {
+    height: 1px;
   }
 }

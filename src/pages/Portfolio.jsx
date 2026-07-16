@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { asset } from '../utils/asset.js'
 import './Portfolio.css'
 
 const categories = ['All', 'Web Development', 'Branding', 'Photography', 'Video', 'Motion', 'Audio', 'Marketing']
 
 const projects = [
-  { name: 'Nine Pilates', type: 'Launch Kit', img: '/assets/images/launchKit-elite-B08ij3UA.png', href: '/portfolio/nine-pilates-launchkit' },
-  { name: 'Nine Pilates', type: 'Branding', img: '/assets/images/ninePilates-CMncnx6x.jpg', href: '/portfolio/nine-pilates' },
-  { name: 'BeugLab', type: 'Web Development', img: '/assets/images/webdev-BJFsUdj3.png', href: '/portfolio/beuglab' },
+  { name: 'Nine Pilates', type: 'Launch Kit', img: asset('/assets/images/launchKit-elite-B08ij3UA.png'), href: '/portfolio/nine-pilates-launchkit' },
+  { name: 'Nine Pilates', type: 'Branding', img: asset('/assets/images/ninePilates-CMncnx6x.jpg'), href: '/portfolio/nine-pilates' },
+  { name: 'BeugLab', type: 'Web Development', img: asset('/assets/images/webdev-BJFsUdj3.png'), href: '/portfolio/beuglab' },
+  { name: 'Uncle Phils', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/uncle-phils.jpg'), href: '/portfolio/uncle-phils' },
+  { name: 'Wings n Thingz', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/wings-n-thingz.jpg'), href: '/portfolio/wings-n-thingz' },
+  { name: 'Chai Factory', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/chai-factory.jpg'), href: '/portfolio/chai-factory' },
+  { name: 'FLOW', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/flow.jpg'), href: '/portfolio/flow' },
+  { name: 'Juci', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/juci.jpg'), href: '/portfolio/juci' },
+  { name: 'House of Customs', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/house-of-customs.jpg'), href: '/portfolio/house-of-customs' },
 ]
 
 export default function Portfolio() {

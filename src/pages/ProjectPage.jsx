@@ -140,7 +140,7 @@ export default function ProjectPage() {
             </div>
             <div className="project-beyond-grid">
               {project.highlight.images.map((src, i) => (
-                <FadeIn key={src} className="project-image" delay={i * 120}>
+                <FadeIn key={`${src}-${i}`} className="project-image" delay={i * 120}>
                   <Parallax strength={25}>
                     <img src={src} alt={`${project.highlight.heading} ${i + 1}`} />
                   </Parallax>
@@ -164,7 +164,9 @@ export default function ProjectPage() {
               <img src={project.results.image} alt={`${project.name} results`} />
             </FadeIn>
             <FadeIn className="project-results-actions">
-              <a href={project.results.viewUrl} target="_blank" rel="noreferrer" className="btn btn-solid">View project →</a>
+              {project.results.viewUrl && (
+                <a href={project.results.viewUrl} target="_blank" rel="noreferrer" className="btn btn-solid">View project →</a>
+              )}
               <button onClick={openContact} className="btn">Get in touch</button>
             </FadeIn>
           </div>

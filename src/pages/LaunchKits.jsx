@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useContact } from '../context/ContactContext.jsx'
+import { asset } from '../utils/asset.js'
 import './Pricing.css'
 
 const kits = [
@@ -7,19 +8,19 @@ const kits = [
     name: 'Essential',
     price: '$3000',
     desc: 'For startups or personal brands needing to get online, fast.',
-    img: '/assets/images/launchKit-essential-B8WwJ_5T.png',
+    img: asset('/assets/images/launchKit-essential-B8WwJ_5T.png'),
   },
   {
     name: 'Elite',
     price: '$5500',
     desc: 'For founders ready to launch with content, clarity, and a solid foundation.',
-    img: '/assets/images/launchKit-elite-B08ij3UA.png',
+    img: asset('/assets/images/launchKit-elite-B08ij3UA.png'),
   },
   {
     name: 'Ultimate',
     price: '$8500+',
     desc: 'For brands that want it all — a complete launch suite with a mini content library.',
-    img: '/assets/images/launchKit-ultimate-FP3b8sPb.png',
+    img: asset('/assets/images/launchKit-ultimate-FP3b8sPb.png'),
   },
 ]
 

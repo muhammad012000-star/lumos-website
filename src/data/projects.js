@@ -1,5 +1,8 @@
-const nineLaunch = '/assets/portfolio/nine-pilates-launchkit'
-const nineBrand = '/assets/portfolio/nine-pilates-branding'
+import { asset } from '../utils/asset.js'
+
+const nineLaunch = asset('/assets/portfolio/nine-pilates-launchkit')
+const nineBrand = asset('/assets/portfolio/nine-pilates-branding')
+const uncleImg = asset('/assets/portfolio/lumos-projects/uncle-phils.jpg')
 
 export const projects = {
   'nine-pilates-launchkit': {
@@ -137,9 +140,152 @@ export const projects = {
     tags: ['Case Study', 'Web Development'],
     intro: 'Placeholder case study — the source page for this project no longer exists on the original site.',
     isPlaceholder: true,
-    coverImage: '/assets/images/webdev-BJFsUdj3.png',
+    coverImage: asset('/assets/images/webdev-BJFsUdj3.png'),
     about:
       'This project entry is a placeholder. Send over the real project details (overview, images, credits) and I\'ll wire them into this same template.',
+    nextProject: { slug: 'uncle-phils', label: 'Uncle Phils — Branding' },
+  },
+
+  'uncle-phils': {
+    slug: 'uncle-phils',
+    name: 'Uncle Phils',
+    year: '©2025',
+    type: 'Branding Launch Kit',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Logo Design', 'Branding', 'Packaging'],
+    intro:
+      'We took Uncle Phils from a blank slate to a complete, market-ready brand — logo, packaging, and shop design, built from the ground up.',
+    coverImage: uncleImg,
+    steps: [
+      {
+        title: 'Overview',
+        body: [
+          `Uncle Phils needed a full brand identity built from scratch — a bold, punchy mark
+          that could carry across every touchpoint of the business, from packaging on the
+          shelf to the physical shop front.`,
+        ],
+      },
+      {
+        title: 'Approach',
+        body: [
+          `We took the project through the full identity pipeline from day one: starting with
+          the primary logotype, then extending that mark into a packaging system, and finally
+          carrying the identity into the physical retail space.`,
+        ],
+      },
+      {
+        title: 'Challenges',
+        body: [
+          `The core challenge was consistency at scale — making sure one identity could flex
+          across a tiny packaging label and a full shopfront sign without losing its punch or
+          legibility.`,
+        ],
+      },
+      {
+        title: 'Solutions',
+        body: [
+          `We built a high-contrast, bold logotype system designed with flexibility in mind
+          from the start, then rolled it out methodically — packaging first, then signage and
+          interior branding for the shop — so the same energy carried through every surface
+          the brand touches.`,
+        ],
+      },
+    ],
+    images: [{ src: uncleImg, alt: 'Uncle Phils branding', variant: 'wide', parallax: 40 }],
+    testimonial: {
+      image: uncleImg,
+      quote: '[Client testimonial to be added]',
+      name: '',
+      role: '',
+    },
+    highlight: {
+      heading: 'Beyond the Logo',
+      body: 'We make sure every brand we build carries its identity into the real world — from packaging to physical space.',
+      images: [uncleImg, uncleImg],
+      footerHeading: 'Bringing the Brand to Life',
+      footerNote: 'Logo, Packaging & Shop Design',
+      ctaLabel: 'Start today',
+    },
+    results: {
+      text:
+        'From logo to shopfront, we delivered a complete brand identity for Uncle Phils—bold, consistent, and built to stand out at every touchpoint.',
+      image: uncleImg,
+    },
+    nextProject: { slug: 'wings-n-thingz', label: 'Wings n Thingz — Branding' },
+  },
+
+  'wings-n-thingz': {
+    slug: 'wings-n-thingz',
+    name: 'Wings n Thingz',
+    year: '©2025',
+    type: 'Branding',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Branding'],
+    intro: 'Vibrant, appetite-driven branding for a wings-focused food concept.',
+    isPlaceholder: true,
+    coverImage: asset('/assets/portfolio/lumos-projects/wings-n-thingz.jpg'),
+    about:
+      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    nextProject: { slug: 'chai-factory', label: 'Chai Factory — Branding' },
+  },
+
+  'chai-factory': {
+    slug: 'chai-factory',
+    name: 'Chai Factory',
+    year: '©2025',
+    type: 'Branding',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Branding'],
+    intro: 'Warm, editorial brand direction built around mindful, present-moment messaging.',
+    isPlaceholder: true,
+    coverImage: asset('/assets/portfolio/lumos-projects/chai-factory.jpg'),
+    about:
+      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    nextProject: { slug: 'flow', label: 'FLOW — Branding' },
+  },
+
+  flow: {
+    slug: 'flow',
+    name: 'FLOW',
+    year: '©2025',
+    type: 'Branding',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Branding'],
+    intro: 'A confident, movement-led identity built for an activewear brand.',
+    isPlaceholder: true,
+    coverImage: asset('/assets/portfolio/lumos-projects/flow.jpg'),
+    about:
+      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    nextProject: { slug: 'juci', label: 'Juci — Branding' },
+  },
+
+  juci: {
+    slug: 'juci',
+    name: 'Juci',
+    year: '©2025',
+    type: 'Branding',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Branding'],
+    intro: 'A clean, minimalist wordmark and palette for a modern beverage brand.',
+    isPlaceholder: true,
+    coverImage: asset('/assets/portfolio/lumos-projects/juci.jpg'),
+    about:
+      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    nextProject: { slug: 'house-of-customs', label: 'House of Customs — Branding' },
+  },
+
+  'house-of-customs': {
+    slug: 'house-of-customs',
+    name: 'House of Customs',
+    year: '©2025',
+    type: 'Branding',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Branding'],
+    intro: 'A raw, hand-drawn brush-script identity for a custom automotive brand.',
+    isPlaceholder: true,
+    coverImage: asset('/assets/portfolio/lumos-projects/house-of-customs.jpg'),
+    about:
+      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
     nextProject: { slug: 'nine-pilates-launchkit', label: 'Nine Pilates — Launch Kit' },
   },
 }

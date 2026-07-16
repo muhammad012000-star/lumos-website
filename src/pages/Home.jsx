@@ -1,34 +1,63 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useContact } from '../context/ContactContext.jsx'
+import { asset } from '../utils/asset.js'
 import FitText from '../components/FitText.jsx'
 import ScrollRevealText from '../components/ScrollRevealText.jsx'
+import ServicesAccordion from '../components/ServicesAccordion.jsx'
 import './Home.css'
 
 const services = [
   {
     title: 'Web Dev',
     since: 'Since 2023',
-    img: '/assets/images/webdev-BJFsUdj3.png',
+    img: asset('/assets/images/webdev-BJFsUdj3.png'),
     desc: 'Using technologies like React, GSAP, Lenis, and WebGL, we create high-performance websites with unforgettable design and seamless user experiences. Every build is optimized for speed, responsiveness, and visual impact.',
   },
   {
     title: 'Video',
     since: 'Since 2020',
-    img: '/assets/images/videoServices-CqotOEUF.jpg',
+    img: asset('/assets/images/videoServices-CqotOEUF.jpg'),
     desc: 'Using cinematic techniques, bold storytelling, and sharp editing, we produce compelling video content that captures attention and drives engagement. From concept to final cut, every frame is crafted to reflect your brand.',
   },
   {
     title: 'Branding',
     since: 'Since 2024',
-    img: '/assets/images/branding-CHpeN_2S.png',
+    img: asset('/assets/images/branding-CHpeN_2S.png'),
     desc: 'Through thoughtful strategy and refined design, we build brand identities that resonate across every touchpoint. From logos and typography to voice and visuals, we shape brands with clarity, distinction, and lasting impact.',
   },
   {
     title: 'Marketing',
     since: 'Since 2025',
-    img: '/assets/images/marketing-DHeevqBI.jpg',
+    img: asset('/assets/images/marketing-DHeevqBI.jpg'),
     desc: 'We develop strategic campaigns that connect with your audience and convert with purpose. Blending creative direction, content strategy, and performance insights, we help brands grow with confidence across digital platforms.',
+  },
+]
+
+const serviceAccordionItems = [
+  {
+    id: 'web-development',
+    label: 'Web Dev',
+    desc: services[0].desc,
+    pills: ['React & Vite', 'Motion Design', 'Headless CMS'],
+  },
+  {
+    id: 'video-production',
+    label: 'Video',
+    desc: services[1].desc,
+    pills: ['Cinematography', 'Story & Script', 'Color Grading'],
+  },
+  {
+    id: 'branding',
+    label: 'Branding',
+    desc: services[2].desc,
+    pills: ['Logo & Mark', 'Visual Identity', 'Typography Systems'],
+  },
+  {
+    id: 'marketing',
+    label: 'Marketing',
+    desc: services[3].desc,
+    pills: ['Paid Media', 'Content Strategy', 'Email Campaigns'],
   },
 ]
 
@@ -38,7 +67,7 @@ const works = [
     year: '2025',
     type: 'Launch Kit',
     client: 'Nine Pilates',
-    img: '/assets/images/launchKit-elite-B08ij3UA.png',
+    img: asset('/assets/images/launchKit-elite-B08ij3UA.png'),
     href: '/portfolio',
   },
   {
@@ -46,7 +75,7 @@ const works = [
     year: '2025',
     type: 'Branding',
     client: 'Nine Pilates',
-    img: '/assets/images/ninePilates-CMncnx6x.jpg',
+    img: asset('/assets/images/ninePilates-CMncnx6x.jpg'),
     href: '/portfolio',
   },
   {
@@ -54,7 +83,7 @@ const works = [
     year: '2025',
     type: 'Web Dev',
     client: 'BeugLab',
-    img: '/assets/images/webdev-BJFsUdj3.png',
+    img: asset('/assets/images/webdev-BJFsUdj3.png'),
     href: '/portfolio',
   },
 ]
@@ -64,35 +93,35 @@ const process = [
     numeral: 'I',
     title: 'Discovery',
     tags: ['Research', 'Strategy', 'Insights', 'Alignment', 'Planning'],
-    img: '/assets/images/discovery-Bk_QTs9n.jpg',
+    img: asset('/assets/images/discovery-Bk_QTs9n.jpg'),
     desc: 'Every great project begins with clarity. We dive deep into your brand, market, and audience to uncover the insights that shape a winning strategy.',
   },
   {
     numeral: 'II',
     title: 'Creative Direction',
     tags: ['Concept', 'Vision', 'Storytelling', 'Strategy'],
-    img: '/assets/images/process-dev-Cupn64M9.jpg',
+    img: asset('/assets/images/process-dev-Cupn64M9.jpg'),
     desc: 'This is where the vision comes alive. We define the creative narrative, establishing tone, style, and direction for everything that follows.',
   },
   {
     numeral: 'III',
     title: 'Design Execution',
     tags: ['Branding', 'UI/UX', 'Visual Identity', 'Prototyping', 'Production'],
-    img: '/assets/images/branding-CHpeN_2S.png',
+    img: asset('/assets/images/branding-CHpeN_2S.png'),
     desc: 'Our design process is both aesthetic and strategic. We craft bold, memorable visuals and seamless user experiences at every touchpoint.',
   },
   {
     numeral: 'IV',
     title: 'Development',
     tags: ['Web', 'Motion', 'Interaction', 'Performance'],
-    img: '/assets/images/process-dev-Cupn64M9.jpg',
+    img: asset('/assets/images/process-dev-Cupn64M9.jpg'),
     desc: 'Designs become reality through precision development. From advanced animations to high-performance builds, we bring every detail to life.',
   },
   {
     numeral: 'V',
     title: 'Delivery',
     tags: ['Delivery', 'Optimization', 'Support', 'Growth'],
-    img: '/assets/images/discovery-Bk_QTs9n.jpg',
+    img: asset('/assets/images/discovery-Bk_QTs9n.jpg'),
     desc: "A launch isn't the end—it's the beginning of momentum. We manage the rollout with care, optimize for performance, and support you as you grow.",
   },
 ]
@@ -101,6 +130,14 @@ export default function Home() {
   const { openContact } = useContact()
   const [activeProcess, setActiveProcess] = useState(0)
   const processStepRefs = useRef([])
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 900)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
 
   useEffect(() => {
     const observers = processStepRefs.current.map((el, i) => {
@@ -121,10 +158,11 @@ export default function Home() {
     <>
       <section className="hero">
         <video className="hero-bg" autoPlay muted loop playsInline>
-          <source src="/assets/video/flowerBackground-C4Y651BM.mp4" type="video/mp4" />
+          <source src={asset('/assets/video/flowerBackground-C4Y651BM.mp4')} type="video/mp4" />
         </video>
         <div className="hero-inner">
-          <FitText as="h1" className="hero-title">"Lumos Studios."</FitText>
+          <FitText as="h1" className="hero-title">Lumos Studios.</FitText>
+          <p className="hero-title-mobile">Simple by design.<br />Unforgettable by nature.</p>
           <p className="hero-sub">
             We are an experience-driven creative-tech studio that fuses design and strategy
             to shape bold, meaningful brands across multiple mediums.
@@ -156,7 +194,7 @@ export default function Home() {
         <div className="container statement-inner">
           <ScrollRevealText
             as="h2"
-            maxLines={4}
+            maxLines={isMobile ? 7 : 4}
             text="Driven by design that connects, stories that resonate, and strategy that scales. We build digital experiences that captivate, connect, and convert."
           />
           <div className="statement-cta">
@@ -193,6 +231,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <ServicesAccordion items={serviceAccordionItems} />
         </div>
       </section>
 
@@ -279,7 +318,7 @@ export default function Home() {
             </div>
           </div>
           <div className="contact-visual">
-            <img src="/assets/images/982studios-Billboard-NvFQz9Y4.jpg" alt="Lumos Studios billboard" />
+            <img src={asset('/assets/images/982studios-Billboard-NvFQz9Y4.jpg')} alt="Lumos Studios billboard" />
             <h3>Let's get in touch.</h3>
           </div>
         </div>

@@ -1,0 +1,142 @@
+.services-accordion {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .services-accordion {
+    display: block;
+    margin-top: 32px;
+    padding: 0 var(--gutter);
+  }
+}
+
+.accordion-row {
+  border-top: 2px solid var(--snow);
+}
+
+.accordion-row:last-child {
+  border-bottom: 2px solid var(--snow);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  text-align: left;
+}
+
+.accordion-trigger:focus-visible {
+  outline: 1.5px solid var(--snow);
+  outline-offset: 6px;
+}
+
+.accordion-label {
+  font-size: clamp(30px, 9vw, 38px);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.accordion-plus {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.accordion-plus::before,
+.accordion-plus::after {
+  content: '';
+  position: absolute;
+  background: var(--snow);
+  border-radius: 2px;
+}
+
+.accordion-plus::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  transform: translateY(-50%);
+}
+
+.accordion-plus::after {
+  left: 50%;
+  top: 0;
+  width: 1.5px;
+  height: 100%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+}
+
+.accordion-row.is-open .accordion-plus::after {
+  transform: translateX(-50%) scaleY(0);
+}
+
+.accordion-panel-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.accordion-row.is-open .accordion-panel-wrap {
+  grid-template-rows: 1fr;
+}
+
+.accordion-panel-inner {
+  overflow: hidden;
+}
+
+.accordion-panel {
+  padding-bottom: 28px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.accordion-row.is-open .accordion-panel {
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.accordion-panel p {
+  color: var(--ash);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+.accordion-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.accordion-pills span {
+  font-size: 12px;
+  padding: 6px 14px;
+  border: 1px solid var(--dust);
+  border-radius: 999px;
+  color: var(--ash);
+}
+
+.accordion-link {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--snow);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-panel-wrap,
+  .accordion-plus::after,
+  .accordion-panel {
+    transition: none;
+  }
+}

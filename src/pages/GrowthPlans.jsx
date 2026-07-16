@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useContact } from '../context/ContactContext.jsx'
+import { asset } from '../utils/asset.js'
 import './Pricing.css'
 
 const plans = [
@@ -7,19 +8,19 @@ const plans = [
     name: 'Momentum',
     price: '$750/mo',
     desc: 'Perfect for brands who need consistent, reliable creative support.',
-    img: '/assets/images/essentialPackage-DYvrU941.jpg',
+    img: asset('/assets/images/essentialPackage-DYvrU941.jpg'),
   },
   {
     name: 'Alliance',
     price: '$1750/mo',
     desc: 'Ideal for scaling brands looking to elevate their marketing, fast.',
-    img: '/assets/images/elitePackage-HRrhzzEY.jpg',
+    img: asset('/assets/images/elitePackage-HRrhzzEY.jpg'),
   },
   {
     name: 'Partnership',
     price: '$3500+/mo',
     desc: 'Built for long-term growth. A collaborative, full-service relationship.',
-    img: '/assets/images/ultimatePackage-BKKjcYFv.jpg',
+    img: asset('/assets/images/ultimatePackage-BKKjcYFv.jpg'),
   },
 ]
 
