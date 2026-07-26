@@ -318,7 +318,10 @@ export default function Home() {
             </div>
           </div>
           <div className="contact-visual">
-            <img src={asset('/assets/images/982studios-Billboard-NvFQz9Y4.jpg')} alt="Lumos Studios billboard" />
+            <div className="contact-visual-brand" aria-hidden="true">
+              <span className="contact-visual-grid" />
+              <span className="contact-visual-word">lumos</span>
+            </div>
             <h3>Let's get in touch.</h3>
           </div>
         </div>

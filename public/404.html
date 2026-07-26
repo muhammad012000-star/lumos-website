@@ -10,7 +10,7 @@
       // redirects to the app root, where the inline script in index.html
       // decodes it back before React Router mounts.
       // Based on https://github.com/rafgraph/spa-github-pages
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
