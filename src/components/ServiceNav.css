@@ -42,3 +42,20 @@
   color: var(--void);
   background: var(--snow);
 }
+
+@media (max-width: 900px) {
+  .service-nav-wrap {
+    position: static;
+    top: auto;
+  }
+  .service-nav {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding: 14px 20px;
+    gap: 8px;
+  }
+  .service-nav a {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
