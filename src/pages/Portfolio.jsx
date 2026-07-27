@@ -10,6 +10,8 @@ const projects = [
   { name: 'Nine Pilates', type: 'Branding', img: asset('/assets/images/ninePilates-CMncnx6x.jpg'), href: '/portfolio/nine-pilates' },
   { name: 'BeugLab', type: 'Web Development', img: asset('/assets/images/webdev-BJFsUdj3.png'), href: '/portfolio/beuglab' },
   { name: 'Uncle Phils', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/uncle-phils.jpg'), href: '/portfolio/uncle-phils' },
+  { name: 'Heavenly Desserts', type: 'Photography', img: asset('/assets/portfolio/lumos-projects/heavenly-desserts-food.jpg'), href: '/portfolio/heavenly-desserts' },
+  { name: 'Abdul Islam', type: 'Marketing', img: asset('/assets/portfolio/lumos-projects/abdul-islam-1.jpg'), href: '/portfolio/abdul-islam' },
   { name: 'Wings n Thingz', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/wings-n-thingz.jpg'), href: '/portfolio/wings-n-thingz' },
   { name: 'Chai Factory', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/chai-factory.jpg'), href: '/portfolio/chai-factory' },
   { name: 'FLOW', type: 'Branding', img: asset('/assets/portfolio/lumos-projects/flow.jpg'), href: '/portfolio/flow' },

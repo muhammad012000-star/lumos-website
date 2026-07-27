@@ -99,6 +99,10 @@
   color: var(--snow);
 }
 
+.project-about-text p + p {
+  margin-top: 24px;
+}
+
 .project-credits {
   padding: 60px 0 100px;
 }

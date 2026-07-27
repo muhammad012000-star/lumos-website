@@ -80,7 +80,11 @@ export default function ProjectPage() {
         <section className="project-about">
           <div className="container project-about-grid">
             <span className="eyebrow">About</span>
-            <FadeIn as="p" className="project-about-text">{project.about}</FadeIn>
+            <FadeIn className="project-about-text">
+              {(Array.isArray(project.about) ? project.about : [project.about]).map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </FadeIn>
           </div>
         </section>
       )}

@@ -63,28 +63,28 @@ const serviceAccordionItems = [
 
 const works = [
   {
-    tag: 'ninepilates.com',
-    year: '2025',
-    type: 'Launch Kit',
-    client: 'Nine Pilates',
-    img: asset('/assets/images/launchKit-elite-B08ij3UA.png'),
-    href: '/portfolio',
-  },
-  {
-    tag: 'Nine Pilates',
+    tag: 'Uncle Phils',
     year: '2025',
     type: 'Branding',
-    client: 'Nine Pilates',
-    img: asset('/assets/images/ninePilates-CMncnx6x.jpg'),
-    href: '/portfolio',
+    client: 'Uncle Phils',
+    img: asset('/assets/portfolio/lumos-projects/uncle-phils.jpg'),
+    href: '/portfolio/uncle-phils',
   },
   {
-    tag: 'BeugLab.ca',
+    tag: 'Heavenly Desserts',
+    year: '2026',
+    type: 'Photography & Videography',
+    client: 'Heavenly Desserts',
+    img: asset('/assets/portfolio/lumos-projects/heavenly-desserts-food.jpg'),
+    href: '/portfolio/heavenly-desserts',
+  },
+  {
+    tag: 'Abdul Islam',
     year: '2025',
-    type: 'Web Dev',
-    client: 'BeugLab',
-    img: asset('/assets/images/webdev-BJFsUdj3.png'),
-    href: '/portfolio',
+    type: 'Social Media Marketing',
+    client: 'Abdul Islam',
+    img: asset('/assets/portfolio/lumos-projects/abdul-islam-1.jpg'),
+    href: '/portfolio/abdul-islam',
   },
 ]
 

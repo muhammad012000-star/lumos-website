@@ -3,6 +3,18 @@ import { asset } from '../utils/asset.js'
 const nineLaunch = asset('/assets/portfolio/nine-pilates-launchkit')
 const nineBrand = asset('/assets/portfolio/nine-pilates-branding')
 const uncleImg = asset('/assets/portfolio/lumos-projects/uncle-phils.jpg')
+const uncleMenu = asset('/assets/portfolio/lumos-projects/uncle-phils-menu.jpg')
+const unclePoster = asset('/assets/portfolio/lumos-projects/uncle-phils-poster.jpg')
+const uncleStickers = asset('/assets/portfolio/lumos-projects/uncle-phils-stickers.jpg')
+const unclePattern = asset('/assets/portfolio/lumos-projects/uncle-phils-pattern.jpg')
+const heavenlyLogo = asset('/assets/portfolio/lumos-projects/heavenly-desserts-logo.png')
+const heavenlyFood = asset('/assets/portfolio/lumos-projects/heavenly-desserts-food.jpg')
+const abdul1 = asset('/assets/portfolio/lumos-projects/abdul-islam-1.jpg')
+const abdul2 = asset('/assets/portfolio/lumos-projects/abdul-islam-2.jpg')
+const abdul3 = asset('/assets/portfolio/lumos-projects/abdul-islam-3.jpg')
+const abdul4 = asset('/assets/portfolio/lumos-projects/abdul-islam-4.jpg')
+const abdul5 = asset('/assets/portfolio/lumos-projects/abdul-islam-5.jpg')
+const abdul6 = asset('/assets/portfolio/lumos-projects/abdul-islam-6.jpg')
 
 export const projects = {
   'nine-pilates-launchkit': {
@@ -191,17 +203,17 @@ export const projects = {
         ],
       },
     ],
-    images: [{ src: uncleImg, alt: 'Uncle Phils branding', variant: 'wide', parallax: 40 }],
+    images: [{ src: uncleMenu, alt: 'Uncle Phils menu design', variant: 'wide', parallax: 40 }],
     testimonial: {
-      image: uncleImg,
+      image: unclePoster,
       quote: '[Client testimonial to be added]',
       name: '',
       role: '',
     },
     highlight: {
       heading: 'Beyond the Logo',
-      body: 'We make sure every brand we build carries its identity into the real world — from packaging to physical space.',
-      images: [uncleImg, uncleImg],
+      body: 'We make sure every brand we build carries its identity into the real world — from social content to print.',
+      images: [uncleStickers, unclePattern],
       footerHeading: 'Bringing the Brand to Life',
       footerNote: 'Logo, Packaging & Shop Design',
       ctaLabel: 'Start today',
@@ -209,8 +221,55 @@ export const projects = {
     results: {
       text:
         'From logo to shopfront, we delivered a complete brand identity for Uncle Phils—bold, consistent, and built to stand out at every touchpoint.',
-      image: uncleImg,
+      image: uncleStickers,
     },
+    nextProject: { slug: 'heavenly-desserts', label: 'Heavenly Desserts — Branding & Photography' },
+  },
+
+  'heavenly-desserts': {
+    slug: 'heavenly-desserts',
+    name: 'Heavenly Desserts',
+    year: '©2026',
+    type: 'Photography & Videography',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Photography', 'Videography', 'Branding'],
+    intro:
+      'A refined brand identity, food photography, and videography direction for Heavenly Desserts, a dessert and brunch destination built around indulgence and presentation.',
+    coverImage: heavenlyFood,
+    about: [
+      'From the outset, the goal was to give Heavenly Desserts a visual identity that matched the quality of what was coming out of the kitchen. We spent time understanding the brand\'s personality — playful, indulgent, and a little bit special — before landing on the emblem mark that now anchors everything from packaging to social.',
+      'Once the identity was in place, we turned our attention to how the brand shows up in front of customers. Our photography and videography sessions were built around soft, natural light and close, appetising detail shots that make every dish feel like the hero of the frame.',
+      'The result is a brand that feels considered and consistent everywhere it appears — whether that\'s a story on Instagram, a photo on the menu, or a still from one of the video edits.',
+    ],
+    images: [
+      { src: heavenlyFood, alt: 'Heavenly Desserts food photography', variant: 'wide', parallax: 40 },
+      { src: heavenlyLogo, alt: 'Heavenly Desserts emblem logo', variant: 'tall' },
+    ],
+    nextProject: { slug: 'abdul-islam', label: 'Abdul Islam — Social Media Marketing' },
+  },
+
+  'abdul-islam': {
+    slug: 'abdul-islam',
+    name: 'Abdul Islam',
+    year: '©2025',
+    type: 'Social Media Marketing & Design',
+    location: 'Birmingham, United Kingdom',
+    tags: ['Case Study', 'Social Media Marketing', 'Design'],
+    intro:
+      'Ongoing social media marketing and design support for Abdul Islam, helping the brand\'s food reach a wider audience online.',
+    coverImage: abdul1,
+    about: [
+      'Abdul Islam came to us looking for a more consistent, professional presence across social media — content that did justice to the food without needing a big production every time. We built a simple content system around their existing photography, pairing strong crops and colour grading with clean, on-brand promotional graphics.',
+      'Day to day, we handle the planning, design, and posting cadence — keeping the feed varied between straight food shots, offers, and behind-the-scenes moments — so the account stays active and engaging without extra effort on their end.',
+      'Since taking over social, the account has become a more reliable channel for driving footfall and repeat orders, with content that consistently performs well with their local audience.',
+    ],
+    images: [
+      { src: abdul2, alt: 'Abdul Islam food photography', variant: 'wide', parallax: 40 },
+      { src: abdul3, alt: 'Abdul Islam food photography', variant: 'wide' },
+      { src: abdul4, alt: 'Abdul Islam food photography', variant: 'wide' },
+      { src: abdul5, alt: 'Abdul Islam food photography', variant: 'wide' },
+      { src: abdul6, alt: 'Abdul Islam food photography', variant: 'wide' },
+    ],
     nextProject: { slug: 'wings-n-thingz', label: 'Wings n Thingz — Branding' },
   },
 
