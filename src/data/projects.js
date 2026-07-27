@@ -16,6 +16,50 @@ const abdul4 = asset('/assets/portfolio/lumos-projects/abdul-islam-4.jpg')
 const abdul5 = asset('/assets/portfolio/lumos-projects/abdul-islam-5.jpg')
 const abdul6 = asset('/assets/portfolio/lumos-projects/abdul-islam-6.jpg')
 
+// Shared step/testimonial/highlight/results scaffold for case studies still
+// awaiting their real project details — keeps the layout consistent with
+// the fully-fleshed-out projects while staying honest that specifics are TBC.
+function placeholderSections(name, type, coverImage) {
+  return {
+    steps: [
+      {
+        title: 'Overview',
+        body: [`${name} is a placeholder case study, pulled into the portfolio ahead of the real project details.`],
+      },
+      {
+        title: 'Approach',
+        body: ['Once the brief, images, and outcomes are shared, we\'ll rebuild this section with the real story behind the work.'],
+      },
+      {
+        title: 'Challenges',
+        body: ['This section will cover the specific challenges once the full case study details are available.'],
+      },
+      {
+        title: 'Solutions',
+        body: ['This section will cover our solution once the full case study details are available.'],
+      },
+    ],
+    testimonial: {
+      image: coverImage,
+      quote: '[Client testimonial to be added]',
+      name: '',
+      role: '',
+    },
+    highlight: {
+      heading: 'Beyond the Brand',
+      body: 'This project entry is a placeholder — real supporting visuals and details will go here.',
+      images: [coverImage, coverImage],
+      footerHeading: 'More To Come',
+      footerNote: type,
+      ctaLabel: 'Start today',
+    },
+    results: {
+      text: 'Full results for this project will be added once details are available.',
+      image: coverImage,
+    },
+  }
+}
+
 export const projects = {
   'nine-pilates-launchkit': {
     slug: 'nine-pilates-launchkit',
@@ -119,8 +163,60 @@ export const projects = {
       url: 'https://ninepilates.com',
     },
     coverImage: `${nineBrand}/ninePilates.jpg`,
-    about:
-      'This project involved developing a brand identity for Nine Pilates, a studio rooted in mindfulness, strength, and connection. The goal was to create a visual and verbal language that reflects the studio\'s minimalist ethos while conveying calm, control, and contemporary wellness. The deliverables included logo design, color palette, typography, and brand guidelines aligned with Nine\'s core values.',
+    steps: [
+      {
+        title: 'Overview',
+        body: [
+          `This project involved developing a brand identity for Nine Pilates, a studio rooted in
+          mindfulness, strength, and connection. The goal was to create a visual and verbal
+          language that reflects the studio's minimalist ethos while conveying calm, control, and
+          contemporary wellness.`,
+        ],
+      },
+      {
+        title: 'Approach',
+        body: [
+          `We approached the identity as a complete system rather than a single mark — logo,
+          colour palette, typography, and brand guidelines all developed together, so every
+          touchpoint would feel unmistakably Nine Pilates.`,
+        ],
+      },
+      {
+        title: 'Challenges',
+        body: [
+          `The challenge was striking the right balance: a mark calm and minimal enough to feel
+          like a wellness studio, but distinctive enough to stand out across signage, apparel,
+          and digital applications.`,
+        ],
+      },
+      {
+        title: 'Solutions',
+        body: [
+          `We landed on a refined wordmark and a restrained colour and type system, then extended
+          it across everything from business cards to water bottles — giving the studio a
+          consistent, considered presence everywhere the brand shows up.`,
+        ],
+      },
+    ],
+    testimonial: {
+      image: `${nineBrand}/ninepilates-mainLogoDisplay.jpg`,
+      quote: '[Client testimonial to be added]',
+      name: '',
+      role: '',
+    },
+    highlight: {
+      heading: 'Beyond the Logo',
+      body: 'We make sure every identity we build carries through to the physical touchpoints customers actually see and hold.',
+      images: [`${nineBrand}/ninepilates-businessCards.jpg`, `${nineBrand}/ninepilates-waterBottle.jpg`],
+      footerHeading: 'Bringing the Brand to Life',
+      footerNote: 'Logo, Print & Merchandise',
+      ctaLabel: 'Start today',
+    },
+    results: {
+      text:
+        'The result is a calm, considered identity that carries Nine Pilates\' values across every touchpoint — from the studio floor to the website in your hand.',
+      image: `${nineBrand}/ninepilates-macbook.jpg`,
+    },
     images: [
       { src: `${nineBrand}/ninepilates-brandIdentityCover.jpg`, alt: 'Nine Pilates brand identity cover', variant: 'wide' },
       { src: `${nineBrand}/ninepilates-mainLogoDisplay.jpg`, alt: 'Nine Pilates main logo', variant: 'wide' },
@@ -153,8 +249,7 @@ export const projects = {
     intro: 'Placeholder case study — the source page for this project no longer exists on the original site.',
     isPlaceholder: true,
     coverImage: asset('/assets/images/webdev-BJFsUdj3.png'),
-    about:
-      'This project entry is a placeholder. Send over the real project details (overview, images, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('BeugLab', 'Web Development', asset('/assets/images/webdev-BJFsUdj3.png')),
     nextProject: { slug: 'uncle-phils', label: 'Uncle Phils — Branding' },
   },
 
@@ -236,15 +331,65 @@ export const projects = {
     intro:
       'A refined brand identity, food photography, and videography direction for Heavenly Desserts, a dessert and brunch destination built around indulgence and presentation.',
     coverImage: heavenlyFood,
-    about: [
-      'From the outset, the goal was to give Heavenly Desserts a visual identity that matched the quality of what was coming out of the kitchen. We spent time understanding the brand\'s personality — playful, indulgent, and a little bit special — before landing on the emblem mark that now anchors everything from packaging to social.',
-      'Once the identity was in place, we turned our attention to how the brand shows up in front of customers. Our photography and videography sessions were built around soft, natural light and close, appetising detail shots that make every dish feel like the hero of the frame.',
-      'The result is a brand that feels considered and consistent everywhere it appears — whether that\'s a story on Instagram, a photo on the menu, or a still from one of the video edits.',
+    steps: [
+      {
+        title: 'Overview',
+        body: [
+          `From the outset, the goal was to give Heavenly Desserts a visual identity that matched
+          the quality of what was coming out of the kitchen. We spent time understanding the
+          brand's personality — playful, indulgent, and a little bit special — before landing on
+          the emblem mark that now anchors everything from packaging to social.`,
+        ],
+      },
+      {
+        title: 'Approach',
+        body: [
+          `Once the identity was in place, we turned our attention to how the brand shows up in
+          front of customers. Our photography and videography sessions were built around soft,
+          natural light and close, appetising detail shots that make every dish feel like the
+          hero of the frame.`,
+        ],
+      },
+      {
+        title: 'Challenges',
+        body: [
+          `The challenge was capturing the full range of the menu — delicate desserts, colourful
+          drinks, and full brunch plates — in a way that felt cohesive, rather than like several
+          different shoots stitched together.`,
+        ],
+      },
+      {
+        title: 'Solutions',
+        body: [
+          `We built a consistent shot list and colour treatment that flexes across every dish on
+          the menu, giving Heavenly Desserts a visual language that stays recognisable whether
+          it's a story on Instagram, a photo on the menu, or a still from one of the video edits.`,
+        ],
+      },
     ],
     images: [
       { src: heavenlyFood, alt: 'Heavenly Desserts food photography', variant: 'wide', parallax: 40 },
       { src: heavenlyLogo, alt: 'Heavenly Desserts emblem logo', variant: 'tall' },
     ],
+    testimonial: {
+      image: heavenlyLogo,
+      quote: '[Client testimonial to be added]',
+      name: '',
+      role: '',
+    },
+    highlight: {
+      heading: 'Beyond the Plate',
+      body: 'We make sure every brand we build carries its identity into the real world — from social content to video.',
+      images: [heavenlyFood, heavenlyLogo],
+      footerHeading: 'Bringing the Brand to Life',
+      footerNote: 'Branding, Photography & Videography',
+      ctaLabel: 'Start today',
+    },
+    results: {
+      text:
+        'The result is a brand that feels considered and consistent everywhere it appears — indulgent, elevated, and unmistakably Heavenly Desserts.',
+      image: heavenlyFood,
+    },
     nextProject: { slug: 'abdul-islam', label: 'Abdul Islam — Social Media Marketing' },
   },
 
@@ -258,18 +403,65 @@ export const projects = {
     intro:
       'Ongoing social media marketing and design support for Abdul Islam, helping the brand\'s food reach a wider audience online.',
     coverImage: abdul1,
-    about: [
-      'Abdul Islam came to us looking for a more consistent, professional presence across social media — content that did justice to the food without needing a big production every time. We built a simple content system around their existing photography, pairing strong crops and colour grading with clean, on-brand promotional graphics.',
-      'Day to day, we handle the planning, design, and posting cadence — keeping the feed varied between straight food shots, offers, and behind-the-scenes moments — so the account stays active and engaging without extra effort on their end.',
-      'Since taking over social, the account has become a more reliable channel for driving footfall and repeat orders, with content that consistently performs well with their local audience.',
+    steps: [
+      {
+        title: 'Overview',
+        body: [
+          `Abdul Islam came to us looking for a more consistent, professional presence across
+          social media — content that did justice to the food without needing a big production
+          every time.`,
+        ],
+      },
+      {
+        title: 'Approach',
+        body: [
+          `We built a simple content system around their existing photography, pairing strong
+          crops and colour grading with clean, on-brand promotional graphics, then took over the
+          planning, design, and posting cadence.`,
+        ],
+      },
+      {
+        title: 'Challenges',
+        body: [
+          `The challenge was keeping the feed varied and consistently engaging — balancing
+          straight food shots, offers, and behind-the-scenes moments — without it becoming
+          repetitive or feeling like more work for the client.`,
+        ],
+      },
+      {
+        title: 'Solutions',
+        body: [
+          `We settled into a simple content rhythm that keeps the account active and on-brand day
+          to day. Since taking over social, it's become a more reliable channel for driving
+          footfall and repeat orders, with content that consistently performs well with their
+          local audience.`,
+        ],
+      },
     ],
     images: [
       { src: abdul2, alt: 'Abdul Islam food photography', variant: 'wide', parallax: 40 },
       { src: abdul3, alt: 'Abdul Islam food photography', variant: 'wide' },
       { src: abdul4, alt: 'Abdul Islam food photography', variant: 'wide' },
-      { src: abdul5, alt: 'Abdul Islam food photography', variant: 'wide' },
-      { src: abdul6, alt: 'Abdul Islam food photography', variant: 'wide' },
     ],
+    testimonial: {
+      image: abdul5,
+      quote: '[Client testimonial to be added]',
+      name: '',
+      role: '',
+    },
+    highlight: {
+      heading: 'Beyond the Feed',
+      body: 'We keep the content pipeline running — planning, shooting direction, and design all handled so the account never goes quiet.',
+      images: [abdul6, abdul1],
+      footerHeading: 'Consistent, On-Brand, Always Fresh',
+      footerNote: 'Social Media Marketing & Design',
+      ctaLabel: 'Start today',
+    },
+    results: {
+      text:
+        'Since taking over social, Abdul Islam has a more reliable channel for driving footfall and repeat orders — with content that consistently performs well with their local audience.',
+      image: abdul4,
+    },
     nextProject: { slug: 'wings-n-thingz', label: 'Wings n Thingz — Branding' },
   },
 
@@ -283,8 +475,7 @@ export const projects = {
     intro: 'Vibrant, appetite-driven branding for a wings-focused food concept.',
     isPlaceholder: true,
     coverImage: asset('/assets/portfolio/lumos-projects/wings-n-thingz.jpg'),
-    about:
-      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('Wings n Thingz', 'Branding', asset('/assets/portfolio/lumos-projects/wings-n-thingz.jpg')),
     nextProject: { slug: 'chai-factory', label: 'Chai Factory — Branding' },
   },
 
@@ -298,8 +489,7 @@ export const projects = {
     intro: 'Warm, editorial brand direction built around mindful, present-moment messaging.',
     isPlaceholder: true,
     coverImage: asset('/assets/portfolio/lumos-projects/chai-factory.jpg'),
-    about:
-      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('Chai Factory', 'Branding', asset('/assets/portfolio/lumos-projects/chai-factory.jpg')),
     nextProject: { slug: 'flow', label: 'FLOW — Branding' },
   },
 
@@ -313,8 +503,7 @@ export const projects = {
     intro: 'A confident, movement-led identity built for an activewear brand.',
     isPlaceholder: true,
     coverImage: asset('/assets/portfolio/lumos-projects/flow.jpg'),
-    about:
-      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('FLOW', 'Branding', asset('/assets/portfolio/lumos-projects/flow.jpg')),
     nextProject: { slug: 'juci', label: 'Juci — Branding' },
   },
 
@@ -328,8 +517,7 @@ export const projects = {
     intro: 'A clean, minimalist wordmark and palette for a modern beverage brand.',
     isPlaceholder: true,
     coverImage: asset('/assets/portfolio/lumos-projects/juci.jpg'),
-    about:
-      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('Juci', 'Branding', asset('/assets/portfolio/lumos-projects/juci.jpg')),
     nextProject: { slug: 'house-of-customs', label: 'House of Customs — Branding' },
   },
 
@@ -343,8 +531,7 @@ export const projects = {
     intro: 'A raw, hand-drawn brush-script identity for a custom automotive brand.',
     isPlaceholder: true,
     coverImage: asset('/assets/portfolio/lumos-projects/house-of-customs.jpg'),
-    about:
-      'This project entry is a placeholder pulled in from the Lumos Studios portfolio. Send over the full case study details (overview, process, credits) and I\'ll wire them into this same template.',
+    ...placeholderSections('House of Customs', 'Branding', asset('/assets/portfolio/lumos-projects/house-of-customs.jpg')),
     nextProject: { slug: 'nine-pilates-launchkit', label: 'Nine Pilates — Launch Kit' },
   },
 }
