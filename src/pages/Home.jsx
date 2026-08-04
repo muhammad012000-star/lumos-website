@@ -195,7 +195,7 @@ export default function Home() {
           <ScrollRevealText
             as="h2"
             maxLines={isMobile ? 7 : 4}
-            text="Driven by design that connects, stories that resonate, and strategy that scales. We build digital experiences that captivate, connect, and convert."
+            text="We don't just build brands. We build the ones people can't stop talking about."
           />
           <div className="statement-cta">
             <button onClick={openContact} className="btn btn-solid">Connect with us.</button>

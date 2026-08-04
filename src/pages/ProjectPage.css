@@ -73,7 +73,6 @@
 
 .project-copy {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
 }
 
 .project-copy-inner {
@@ -83,7 +82,6 @@
 
 .project-about {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
 }
 
 .project-about-grid {
@@ -158,7 +156,6 @@
 
 .project-testimonial {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
 }
 
 .project-testimonial-grid {
@@ -191,7 +188,6 @@
 
 .project-beyond {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
 }
 
 .project-beyond-head {
@@ -237,7 +233,6 @@
 
 .project-results {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
 }
 
 .project-results h2 {
@@ -260,7 +255,6 @@
 
 .project-next {
   padding: 100px 0;
-  border-top: 1px solid var(--dust);
   text-align: center;
 }
 
