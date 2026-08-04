@@ -21,7 +21,10 @@ export default function ServiceNav({ items }) {
 
   const handleClick = (e, id) => {
     e.preventDefault()
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const el = document.getElementById(id)
+    if (!el) return
+    if (window.lenis) window.lenis.scrollTo(el)
+    else el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (

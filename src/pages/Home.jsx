@@ -217,19 +217,52 @@ export default function Home() {
             </div>
           </div>
           <div className="services-grid">
-            {services.map((s) => (
+            <Link to="/services" className="service-card service-web-dev">
+              <span className="service-arrow">↗</span>
+              <img className="card-media" src={services[0].img} alt="" aria-hidden="true" />
+              <div className="card-content">
+                <h3>{services[0].title}</h3>
+                <p>{services[0].desc}</p>
+              </div>
+            </Link>
+            <Link
+              to="/services"
+              className="service-card service-video"
+              style={{ '--service-img': `url(${services[1].img})` }}
+            >
+              <span className="service-arrow">↗</span>
+              <div className="card-content card-content--center">
+                <h3>{services[1].title}</h3>
+                <p>{services[1].desc}</p>
+              </div>
+            </Link>
+            <Link
+              to="/services"
+              className="service-card service-branding"
+              style={{ '--service-img': `url(${services[2].img})` }}
+            >
+              <span className="service-arrow">↗</span>
+              <div className="card-content">
+                <h3>{services[2].title}</h3>
+                <p>{services[2].desc}</p>
+              </div>
+            </Link>
+            <div className="right-bottom">
               <Link
                 to="/services"
-                key={s.title}
-                className="service-card"
-                style={{ '--service-img': `url(${s.img})` }}
+                className="service-card service-marketing"
+                style={{ '--service-img': `url(${services[3].img})` }}
               >
                 <span className="service-arrow">↗</span>
-                <span className="service-since">{s.since}</span>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
+                <div className="card-content card-content--marketing">
+                  <h3>{services[3].title}</h3>
+                  <p>{services[3].desc}</p>
+                </div>
               </Link>
-            ))}
+              <div className="service-card service-sphere-card" aria-hidden="true">
+                <span className="service-orb" />
+              </div>
+            </div>
           </div>
           <ServicesAccordion items={serviceAccordionItems} />
         </div>

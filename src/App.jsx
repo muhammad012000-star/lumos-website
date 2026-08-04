@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import Nav from './components/Nav.jsx'
 import Footer from './components/Footer.jsx'
 import ContactOverlay from './components/ContactOverlay.jsx'
+import SmoothScroll from './components/SmoothScroll.jsx'
 import { ContactProvider } from './context/ContactContext.jsx'
 import { asset } from './utils/asset.js'
 import Home from './pages/Home.jsx'
@@ -16,7 +17,8 @@ import NotFound from './pages/NotFound.jsx'
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
-    window.scrollTo(0, 0)
+    if (window.lenis) window.lenis.scrollTo(0, { immediate: true })
+    else window.scrollTo(0, 0)
   }, [pathname])
   return null
 }
@@ -28,6 +30,7 @@ export default function App() {
         className="noise-overlay"
         style={{ backgroundImage: `url(${asset('/assets/images/noise-bg-BO_BuknL.png')})` }}
       />
+      <SmoothScroll />
       <ScrollToTop />
       <Nav />
       <Routes>
