@@ -9,55 +9,55 @@ import './Home.css'
 
 const services = [
   {
-    title: 'Web Dev',
-    since: 'Since 2023',
-    img: asset('/assets/images/webdev-BJFsUdj3.png'),
-    desc: 'Using technologies like React, GSAP, Lenis, and WebGL, we create high-performance websites with unforgettable design and seamless user experiences. Every build is optimized for speed, responsiveness, and visual impact.',
-  },
-  {
-    title: 'Video',
+    title: 'Content Creation',
     since: 'Since 2020',
     img: asset('/assets/images/videoServices-CqotOEUF.jpg'),
-    desc: 'Using cinematic techniques, bold storytelling, and sharp editing, we produce compelling video content that captures attention and drives engagement. From concept to final cut, every frame is crafted to reflect your brand.',
+    desc: 'From cinematic video to photography and social-first creative, we produce content that captures attention and tells your story. Every asset is designed to strengthen your brand and drive engagement.',
   },
   {
-    title: 'Branding',
+    title: 'Strategy & Branding',
     since: 'Since 2024',
     img: asset('/assets/images/branding-CHpeN_2S.png'),
-    desc: 'Through thoughtful strategy and refined design, we build brand identities that resonate across every touchpoint. From logos and typography to voice and visuals, we shape brands with clarity, distinction, and lasting impact.',
+    desc: 'A strong brand starts with a clear strategy. We define your positioning, messaging, and visual identity to create a brand that is memorable, consistent, and built to connect with your audience.',
   },
   {
     title: 'Marketing',
     since: 'Since 2025',
     img: asset('/assets/images/marketing-DHeevqBI.jpg'),
-    desc: 'We develop strategic campaigns that connect with your audience and convert with purpose. Blending creative direction, content strategy, and performance insights, we help brands grow with confidence across digital platforms.',
+    desc: 'We build marketing systems that do more than generate clicks. Through paid campaigns, content strategy, and data-driven optimisation, we help brands reach the right audience, increase conversions, and achieve measurable growth.',
+  },
+  {
+    title: 'Web Development',
+    since: 'Since 2023',
+    img: asset('/assets/images/webdev-BJFsUdj3.png'),
+    desc: 'We create fast, modern websites that combine exceptional design with seamless performance. Every build is responsive, optimised for speed, and crafted to deliver an intuitive user experience across every device.',
   },
 ]
 
 const serviceAccordionItems = [
   {
-    id: 'web-development',
-    label: 'Web Dev',
-    desc: services[0].desc,
-    pills: ['React & Vite', 'Motion Design', 'Headless CMS'],
-  },
-  {
     id: 'video-production',
-    label: 'Video',
-    desc: services[1].desc,
+    label: 'Content Creation',
+    desc: services[0].desc,
     pills: ['Cinematography', 'Story & Script', 'Color Grading'],
   },
   {
     id: 'branding',
-    label: 'Branding',
-    desc: services[2].desc,
+    label: 'Strategy & Branding',
+    desc: services[1].desc,
     pills: ['Logo & Mark', 'Visual Identity', 'Typography Systems'],
   },
   {
     id: 'marketing',
     label: 'Marketing',
-    desc: services[3].desc,
+    desc: services[2].desc,
     pills: ['Paid Media', 'Content Strategy', 'Email Campaigns'],
+  },
+  {
+    id: 'web-development',
+    label: 'Web Development',
+    desc: services[3].desc,
+    pills: ['React & Vite', 'Motion Design', 'Headless CMS'],
   },
 ]
 
